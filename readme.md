@@ -1,6 +1,7 @@
 # Calculator App Practice
 
-This is a coding practice where I learn how to build a calculator app using HTML, CSS and Vanilla JavaScript
+This is a coding practice where I learn how to build a calculator app using HTML, CSS and Vanilla JavaScript.
+Original tutorial from Web Dev Simplified.
 
 ## Table of contents
 
