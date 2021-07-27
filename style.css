@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(233, 204, 41), yellow ); 
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(150px, auto), repeat(5, 80px);
+    justify-content: center;
+    align-content: center; /*To avoid weird gaps between the buttons*/
+    min-height: 100vh;
+}
+
+/*Select all the buttons inside this div*/
+.calculator-grid > button { 
+    height: 80px;
+    cursor: pointer;
+    font-size: 1.75rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.span-two {
+    grid-column: span 2; /*button takes 2 spaces*/
+}
+
+button.span-two {
+    background-color: rgb(248, 161, 0);
+}
+
+button.del-btn {
+    background-color: #000000d0;
+    color: white;
+}
+
+.output {
+    grid-column: 1 / -1; /*From column 1 to the last one*/
+    background-color: rgba(3, 20, 44, 0.904);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    min-height: 70px;
+    padding: 10px;
+    word-wrap: break-word; /*where to break words*/
+    word-break: break-all; /*break all words*/
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.25rem;
+}
+
+.output .current-operand {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2.25rem;
+}
